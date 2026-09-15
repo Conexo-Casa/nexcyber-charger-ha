@@ -1,0 +1,16 @@
+{
+  "domain": "nexcyber_charger",
+  "name": "NexCyber EV Charger",
+  "codeowners": [
+    "@Conexo-Casa"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/Conexo-Casa/nexcyber-charger-ha",
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/Conexo-Casa/nexcyber-charger-ha/issues",
+  "requirements": [
+    "tinytuya>=1.13.0"
+  ],
+  "version": "1.0.0"
+}

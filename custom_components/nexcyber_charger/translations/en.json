@@ -1,0 +1,63 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "NexCyber EV Charger",
+        "description": "Connect to the charger over your local network. Extract the local_key with a Tuya local-key tool (e.g. tinytuya wizard, or a device-sharing app-account login tool if your Tuya Cloud project's IoT Core trial has lapsed).",
+        "data": {
+          "host": "IP address",
+          "device_id": "Device ID",
+          "local_key": "Local key",
+          "protocol_version": "Protocol version"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the charger. Check the IP address, device ID, local key, and protocol version."
+    },
+    "abort": {
+      "already_configured": "This charger is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "power_total": {
+        "name": "Power"
+      },
+      "forward_energy_total": {
+        "name": "Lifetime Energy"
+      },
+      "charge_energy_once": {
+        "name": "Session Energy"
+      },
+      "temp_current": {
+        "name": "Charger Temperature"
+      },
+      "work_state": {
+        "name": "Charger State",
+        "state": {
+          "charger_free": "Free",
+          "charger_insert": "Plugged in",
+          "charger_free_fault": "Fault (idle)",
+          "charger_wait": "Waiting",
+          "charger_charging": "Charging",
+          "charger_pause": "Paused",
+          "charger_end": "Finished",
+          "charger_fault": "Fault"
+        }
+      },
+      "connection_state": {
+        "name": "Pilot Signal",
+        "state": {
+          "controlpi_12v": "12V (not connected)",
+          "controlpi_12v_pwm": "12V PWM",
+          "controlpi_9v": "9V (connected)",
+          "controlpi_9v_pwm": "9V PWM",
+          "controlpi_6v": "6V (ready)",
+          "controlpi_6v_pwm": "6V PWM (charging)",
+          "controlpi_error": "Error"
+        }
+      }
+    }
+  }
+}

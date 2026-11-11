@@ -82,10 +82,6 @@ by this integration's `const.py`.
 
 ### Marketplace (Home Assistant 2026.11 and newer)
 
-> [!NOTE]
-> This repository is private for now. The Marketplace only adds public repositories,
-> so use the manual install below until it is published.
-
 [![Open your Home Assistant instance and show this repository in the Marketplace.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Conexo-Casa&repository=nexcyber-charger-ha&category=integration)
 
 Or by hand:

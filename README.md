@@ -1,9 +1,9 @@
 # NexCyber EV Charger — Home Assistant Integration
 
-[![HACS Custom][hacs-badge]][hacs-url]
+[![Home Assistant Marketplace](https://img.shields.io/badge/HA%20Marketplace-custom%20repository-41BDF5.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Conexo-Casa&repository=nexcyber-charger-ha&category=integration)
 [![HA Version][ha-badge]][ha-url]
 
-A HACS-compatible custom integration for the **NexCyber 48A Level 2 EV
+A custom integration for the **NexCyber 48A Level 2 EV
 Charger** — a white-labeled Tuya device (`Smart Life` / `Tuya Smart` app,
 category `qccdz`). Controls the charger over the **local network** via
 [tinytuya](https://github.com/jasonacox/tinytuya) — no Tuya Cloud API, no
@@ -58,7 +58,7 @@ no guessing at an undocumented byte format.
 
 ## Requirements
 
-1. Home Assistant **2024.1** or newer, HACS installed.
+1. Home Assistant **2024.1** or newer.
 2. The charger's **`local_key`**, **device ID**, and **LAN IP** (a DHCP
    reservation is worth setting up so the IP doesn't drift).
 
@@ -80,11 +80,33 @@ by this integration's `const.py`.
 
 ## Installation
 
-### Via HACS (recommended)
+### Marketplace (Home Assistant 2026.11 and newer)
 
-1. In HACS → **Integrations** → ⋮ → **Custom repositories**
-2. Add `https://github.com/Conexo-Casa/nexcyber-charger-ha` — category **Integration**
-3. Install **NexCyber EV Charger** and restart Home Assistant
+> [!NOTE]
+> This repository is private for now. The Marketplace only adds public repositories,
+> so use the manual install below until it is published.
+
+[![Open your Home Assistant instance and show this repository in the Marketplace.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Conexo-Casa&repository=nexcyber-charger-ha&category=integration)
+
+Or by hand:
+
+1. Go to **Settings → Marketplace**.
+2. Select **Add from link** (top right) and enter `Conexo-Casa/nexcyber-charger-ha`.
+   The first time, Home Assistant asks you to connect GitHub. That is a one-time,
+   read-only sign-in on github.com.
+3. Open **NexCyber EV Charger** and select **Install**. The setup screen opens right away; a first
+   install doesn't need a restart.
+
+Updates show up under **Settings → Updates**. After an update, Home Assistant shows a
+repair that offers to restart.
+
+### HACS (Home Assistant 2026.10 and older)
+
+1. HACS → **Integrations** → **⋮** → **Custom repositories**.
+2. Add `https://github.com/Conexo-Casa/nexcyber-charger-ha`, category **Integration**.
+3. Download **NexCyber EV Charger**, then restart Home Assistant.
+
+An existing HACS install moves to the Marketplace by itself when you upgrade to 2026.11.
 
 ### Manual
 
@@ -125,7 +147,5 @@ waiting on this repo.
 
 MIT
 
-[hacs-badge]: https://img.shields.io/badge/HACS-Custom-41BDF5.svg
-[hacs-url]: https://github.com/hacs/integration
 [ha-badge]: https://img.shields.io/badge/Home%20Assistant-2024.1%2B-41BDF5.svg
 [ha-url]: https://www.home-assistant.io/
